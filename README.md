@@ -27,9 +27,9 @@ email: NikMishchenko@yandex.ru
       G --> J[Вывод в консоль нового массива строк];
       C --> H[Создать новый массив размера number];
       H --> K[Передать в метод ManualInputArray новый массив];
-      K --> D
+      K --> D;
       F --> L[Конец];
-      J --> L
+      J --> L;
 ```
 
 ### Метод PrintArray
@@ -38,6 +38,6 @@ email: NikMishchenko@yandex.ru
   graph TD;
       A[Начало]-->B{Текущий элемент массива больше его длины? i >= array.Length?};
       B -- Нет --> C[Вывод на консоль текущего элемента array i];
-      C --> B
+      C --> B;
       B -- Да --> D[Конец];
 ```
