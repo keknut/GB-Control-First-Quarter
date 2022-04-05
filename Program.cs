@@ -9,6 +9,7 @@
 /*  Метод выводит массив строк в консоль
     Input: string[]
     Output: null */
+
 void PrintArray(string[] array){
     Console.WriteLine("Primary array:");
     for (int i = 0; i < array.GetLength(0); i++)
@@ -33,6 +34,22 @@ int NumberWordsThreeChar(string[] array){
     return number;
 }
 
+/*  Метод проверяет, есть ли в исходном массиве элементы состоящие из трёх
+    и менее символов. Если есть, помещает элемент в новый массив.
+    Input: string[], string[]
+    Output: null */
+
+void FillArrayWordsThreeChar(string[] primaryArray, string[] fillArray){
+    int j = 0;
+    for (int i = 0; i < primaryArray.GetLength(0); i++)
+    {
+        if(primaryArray[i].Length <= 3){
+            fillArray[j] = primaryArray[i];
+            j++;
+        }
+    }
+}
+
 Console.WriteLine("Program starting...\nChoose option: \n1. Manual entry of strings\n2. Use prepared data\n   Type Q to exit");
 char answerQuestion = char.Parse(Console.ReadLine());
 
@@ -44,6 +61,9 @@ switch (answerQuestion)
     case '2':
         string[] array = {"hello", "2", "world", ":-)", "1234", "1567", "-2", "computer science", "Russia", "Denmark", "Kazan"};
         PrintArray(array);
+        string[] arrayFinally = new string[NumberWordsThreeChar(array)];
+        FillArrayWordsThreeChar(array, arrayFinally);
+        PrintArray(arrayFinally);
         break;
     case 'Q':
         Console.WriteLine("Program shutdown");
