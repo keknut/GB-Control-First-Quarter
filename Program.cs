@@ -5,7 +5,13 @@
     При решении не рекомендуется пользоваться коллекциями,
     лучше обойтись исключительно массивами. */
 
-    
+void PrintArray(string[] array){
+    Console.WriteLine("Primary array:");
+    for (int i = 0; i < array.GetLength(0); i++)
+    {
+        Console.WriteLine(array[i]);
+    }
+}    
 Console.WriteLine("Program starting...\nChoose option: \n1. Manual entry of strings\n2. Use prepared data\n   Type Q to exit");
 char answerQuestion = char.Parse(Console.ReadLine());
 
@@ -15,7 +21,7 @@ switch (answerQuestion)
         Console.WriteLine("First method");
         break;
     case '2':
-        Console.WriteLine("Second method");
+        string[] array = {"hello", "2", "world", ":-)", "1234", "1567", "-2", "computer science", "Russia", "Denmark", "Kazan"};
         break;
     case 'Q':
         Console.WriteLine("Program shutdown");
