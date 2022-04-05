@@ -28,4 +28,6 @@ email: NikMishchenko@yandex.ru
       C --> H[Создать новый массив размера number]
       H --> K[Передать в метод ManualInputArray новый массив]
       K --> D
+      F --> L[Конец]
+      J --> L
 ```
