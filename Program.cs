@@ -11,10 +11,10 @@
     Output: null */
 
 void PrintArray(string[] array){
-    Console.WriteLine("Primary array:");
+    Console.WriteLine("-------------------");
     for (int i = 0; i < array.GetLength(0); i++)
     {
-        Console.WriteLine(array[i]);
+        Console.WriteLine($"[{i}]: {array[i]}");
     }
 }
 
@@ -60,9 +60,11 @@ switch (answerQuestion)
         break;
     case '2':
         string[] array = {"hello", "2", "world", ":-)", "1234", "1567", "-2", "computer science", "Russia", "Denmark", "Kazan"};
+        Console.WriteLine("\nPrimary array");
         PrintArray(array);
         string[] arrayFinally = new string[NumberWordsThreeChar(array)];
         FillArrayWordsThreeChar(array, arrayFinally);
+        Console.WriteLine("\nNew array");
         PrintArray(arrayFinally);
         break;
     case 'Q':
