@@ -50,7 +50,18 @@ void FillArrayWordsThreeChar(string[] primaryArray, string[] fillArray){
     }
 }
 
+/*  Метод заполняет массив строк, вводом вручную с консоли.
+    Input: string[]
+    Output: null */
 
+void ManualInputArray(string[] array){
+    Console.WriteLine("\nInput words...\n");
+    for (int i = 0; i < array.GetLength(0); i++)
+    {
+        Console.Write($"[{i}]: ");
+        array[i] = Console.ReadLine();
+    }
+}
 
 Console.WriteLine("Program starting...\nChoose option: \n1. Manual entry of strings\n2. Use prepared data\n   Type Q to exit");
 char answerQuestion = char.Parse(Console.ReadLine());
@@ -61,6 +72,7 @@ switch (answerQuestion)
         Console.WriteLine("\nHow many words will be in the array?");
         int numberWords = int.Parse(Console.ReadLine());
         string[] arrayManual = new string[numberWords];
+
         break;
     case '2':
         string[] arrayPrepared = {"hello", "2", "world", ":-)", "1234", "1567", "-2", "computer science", "Russia", "Denmark", "Kazan"};
