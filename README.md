@@ -31,3 +31,6 @@ email: NikMishchenko@yandex.ru
       F --> L[Конец]
       J --> L
 ```
+
+### Метод PrintArray
+
