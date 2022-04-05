@@ -79,7 +79,7 @@ switch (answerQuestion)
             Console.WriteLine("\nNew array");
             PrintArray(arrayFinallyManual);
         } else {
-            Console.WriteLine("There are no words with three or less characters in the string array.");
+            Console.WriteLine("\nThere are no words with three or less characters in the string array.");
         }
         break;
     case '2':
@@ -92,7 +92,7 @@ switch (answerQuestion)
             Console.WriteLine("\nNew array");
             PrintArray(arrayFinallyPrepared);
         } else {
-            Console.WriteLine("There are no words with three or less characters in the string array.");
+            Console.WriteLine("\nThere are no words with three or less characters in the string array.");
         }
         break;
     case 'Q':
