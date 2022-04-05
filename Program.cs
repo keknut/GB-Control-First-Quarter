@@ -50,20 +50,24 @@ void FillArrayWordsThreeChar(string[] primaryArray, string[] fillArray){
     }
 }
 
+
+
 Console.WriteLine("Program starting...\nChoose option: \n1. Manual entry of strings\n2. Use prepared data\n   Type Q to exit");
 char answerQuestion = char.Parse(Console.ReadLine());
 
 switch (answerQuestion)
 {
     case '1':
-        Console.WriteLine("First method");
+        Console.WriteLine("\nHow many words will be in the array?");
+        int numberWords = int.Parse(Console.ReadLine());
+        string[] arrayManual = new string[numberWords];
         break;
     case '2':
-        string[] array = {"hello", "2", "world", ":-)", "1234", "1567", "-2", "computer science", "Russia", "Denmark", "Kazan"};
+        string[] arrayPrepared = {"hello", "2", "world", ":-)", "1234", "1567", "-2", "computer science", "Russia", "Denmark", "Kazan"};
         Console.WriteLine("\nPrimary array");
-        PrintArray(array);
-        string[] arrayFinally = new string[NumberWordsThreeChar(array)];
-        FillArrayWordsThreeChar(array, arrayFinally);
+        PrintArray(arrayPrepared);
+        string[] arrayFinally = new string[NumberWordsThreeChar(arrayPrepared)];
+        FillArrayWordsThreeChar(arrayPrepared, arrayFinally);
         Console.WriteLine("\nNew array");
         PrintArray(arrayFinally);
         break;
