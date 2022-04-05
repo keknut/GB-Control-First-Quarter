@@ -31,13 +31,3 @@ email: NikMishchenko@yandex.ru
       F --> L[Конец];
       J --> L;
 ```
-
-### Метод PrintArray
-
-```mermaid
-  graph TD;
-      A[Начало]-->B{Текущий элемент массива больше его длины? i >= array.Length?};
-      B -- Нет --> C[Вывод на консоль текущего элемента array i];
-      C --> B;
-      B -- Да --> D[Конец];
-```
