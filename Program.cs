@@ -72,16 +72,20 @@ switch (answerQuestion)
         Console.WriteLine("\nHow many words will be in the array?");
         int numberWords = int.Parse(Console.ReadLine());
         string[] arrayManual = new string[numberWords];
-
+        ManualInputArray(arrayManual);
+        string[] arrayFinallyManual = new string[NumberWordsThreeChar(arrayManual)];
+        FillArrayWordsThreeChar(arrayManual, arrayFinallyManual);
+        Console.WriteLine("\nNew array");
+        PrintArray(arrayFinallyManual);
         break;
     case '2':
         string[] arrayPrepared = {"hello", "2", "world", ":-)", "1234", "1567", "-2", "computer science", "Russia", "Denmark", "Kazan"};
         Console.WriteLine("\nPrimary array");
         PrintArray(arrayPrepared);
-        string[] arrayFinally = new string[NumberWordsThreeChar(arrayPrepared)];
-        FillArrayWordsThreeChar(arrayPrepared, arrayFinally);
+        string[] arrayFinallyPrepared = new string[NumberWordsThreeChar(arrayPrepared)];
+        FillArrayWordsThreeChar(arrayPrepared, arrayFinallyPrepared);
         Console.WriteLine("\nNew array");
-        PrintArray(arrayFinally);
+        PrintArray(arrayFinallyPrepared);
         break;
     case 'Q':
         Console.WriteLine("Program shutdown");
