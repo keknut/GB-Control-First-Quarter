@@ -73,19 +73,27 @@ switch (answerQuestion)
         int numberWords = int.Parse(Console.ReadLine());
         string[] arrayManual = new string[numberWords];
         ManualInputArray(arrayManual);
-        string[] arrayFinallyManual = new string[NumberWordsThreeChar(arrayManual)];
-        FillArrayWordsThreeChar(arrayManual, arrayFinallyManual);
-        Console.WriteLine("\nNew array");
-        PrintArray(arrayFinallyManual);
+        if(NumberWordsThreeChar(arrayManual) != 0){
+            string[] arrayFinallyManual = new string[NumberWordsThreeChar(arrayManual)];
+            FillArrayWordsThreeChar(arrayManual, arrayFinallyManual);
+            Console.WriteLine("\nNew array");
+            PrintArray(arrayFinallyManual);
+        } else {
+            Console.WriteLine("There are no words with three or less characters in the string array.");
+        }
         break;
     case '2':
         string[] arrayPrepared = {"hello", "2", "world", ":-)", "1234", "1567", "-2", "computer science", "Russia", "Denmark", "Kazan"};
         Console.WriteLine("\nPrimary array");
         PrintArray(arrayPrepared);
-        string[] arrayFinallyPrepared = new string[NumberWordsThreeChar(arrayPrepared)];
-        FillArrayWordsThreeChar(arrayPrepared, arrayFinallyPrepared);
-        Console.WriteLine("\nNew array");
-        PrintArray(arrayFinallyPrepared);
+        if(NumberWordsThreeChar(arrayPrepared) != 0){
+            string[] arrayFinallyPrepared = new string[NumberWordsThreeChar(arrayPrepared)];
+            FillArrayWordsThreeChar(arrayPrepared, arrayFinallyPrepared);
+            Console.WriteLine("\nNew array");
+            PrintArray(arrayFinallyPrepared);
+        } else {
+            Console.WriteLine("There are no words with three or less characters in the string array.")
+        }
         break;
     case 'Q':
         Console.WriteLine("Program shutdown");
