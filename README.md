@@ -24,3 +24,6 @@ email: NikMishchenko@yandex.ru
 
 ### NumberWordsThreeChar
 ![NumberWordsThreeChar](NumberWordsThreeChar_algorithm.jpeg)
+
+### ManualInputArray
+![ManualInputArray](ManualInputArray_algorithm.jpg)
