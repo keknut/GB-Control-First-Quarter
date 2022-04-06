@@ -21,3 +21,6 @@ email: NikMishchenko@yandex.ru
 ### FillArrayWordsThreeChar
 
 ![FillArrayWordsThreeChar](FillArrayWordsThreeChar_algorithm.jpg)
+
+### NumberWordsThreeChar
+![NumberWordsThreeChar](NumberWordsThreeChar_algorithm.jpeg)
